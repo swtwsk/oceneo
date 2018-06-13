@@ -1,0 +1,6 @@
+Flask
+Redis
+flask-cors
+pika
+sortedcontainers
+requests

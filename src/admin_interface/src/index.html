@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>Oceneo - panel administracyjny</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <section id="add-product">
+        <div class="container">
+            <form id="add-product-form" action="#" name="add-product-form">
+                <div class="form-group mx-2">
+                    <span class="font-weight-bold mb-0">Dodaj produkt:</span>
+                </div>
+                <div id="form-success-alert" class="alert alert-success" role="alert">
+                    Produkt został dodany!
+                </div>
+                <div id="form-error-alert" class="alert alert-danger" role="alert">
+                    Wystąpił błąd podczas dodawania produktu.
+                </div>
+                <div class="form-group mx-2">
+                    <label for="id-name" class="form-label">Nazwa:</label>
+                    <input id="id-name" class="form-input" name="name" type="text">
+                </div>
+                <div id="id-name-form-error" class="form-error">Podaj nazwę</div>
+                <div class="form-group mx-2">
+                    <label for="id-price" class="form-label">Cena:</label>
+                    <input id="id-price" class="form-input" name="price" type="number">
+                </div>
+                <div id="id-price-form-error" class="form-error">Podaj cenę</div>
+                <div class="form-group mx-2">
+                    <label for="id-producer" class="form-label">Producent:</label>
+                    <input id="id-producer" class="form-input" name="producer" type="text">
+                </div>
+                <div id="id-producer-form-error" class="form-error">Podaj producenta</div>
+                <div class="form-group mx-2">
+                    <label for="id-description" class="form-label">Opis:</label>
+                    <textarea id="id-description" class="form-input" name="description"></textarea>
+                </div>
+                <div id="id-description-form-error" class="form-error">Podaj opis:</div>
+                <button class="mx-2" onclick="return addProduct();">Dodaj</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
+
+<script src="scripts.js"></script>
+
+<!-- PRODUCT_DATA = ['name', 'price', 'producer', 'description'] -->

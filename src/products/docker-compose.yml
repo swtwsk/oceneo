@@ -1,0 +1,23 @@
+version: "3.3"
+services:
+    flask:
+        image: jnp-flask
+        ports:
+            - 8011:80
+        volumes:
+            - ./src:/src
+        command: >
+            bash -c "python products.py"
+        networks:
+            - products-1
+            - jnp-internal-1
+
+    redis:
+        image: redis
+        networks:
+            - products-1
+
+networks:
+    jnp-internal-1:
+        external: true
+    products-1:

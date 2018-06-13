@@ -1,0 +1,130 @@
+#przycisk_szczegoly {
+    width: 15%;
+    background-color: palegreen;
+    font-family: arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: darkolivegreen;
+    text-align: center;
+}
+
+#przycisk_poprzednia_strona {
+    float: left;
+    background-color: palegreen;
+    padding: 4px;
+    border: 2px solid black;
+}
+
+#przycisk_nastepna_strona {
+    float: right;
+    background-color: palegreen;
+    padding: 4px;
+    border: 2px solid gray;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    border-radius: .25rem;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+p {
+    font-family: arial, sans-serif;
+}
+
+header {
+    background-color: #cccccc;
+    padding: 10px;
+    border: 2px solid #aaaaaa;
+    border-radius: .25rem;
+    height: 20px;
+    display: none;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    border-radius: .25rem;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+th {
+    width: 20%;
+}
+
+ul {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    color: black;
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 10px;
+    border: 1px solid #dddddd;
+    margin-bottom: 0.1rem;
+    background: #eeeeee;
+}
+a {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: darkolivegreen;
+    transition: color 0.5s;
+}
+a:hover {
+    color: yellowgreen;
+}
+
+a.tytul_strony {
+    color: black;
+    transition: none;
+    text-underline: none;
+    text-decoration: none;
+}
+a.tytul_strony:hover {
+    color: black;
+}
+
+h1 {
+    font-family: arial, sans-serif;
+    font-size: 2em;
+    text-align: center;
+}
+h2 {
+    font-family: arial, sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    table, ul {
+        font-size: 0.7em;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+}
+
+nav {
+    background-color: lightgreen;
+    border: black solid 1px;
+    border-radius: .25rem;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+footer {
+    margin-bottom: 10px;
+}

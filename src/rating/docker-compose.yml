@@ -1,0 +1,31 @@
+version: "3.3"
+services:
+    flask:
+        image: jnp-flask
+        ports:
+            - 8013:80
+        volumes:
+            - ./src:/src
+        command: >
+            bash -c "./wait-for-it.sh rating_rabbitmq:5672 -- python rating.py"
+        networks:
+            - rating-1
+            - jnp-internal-1
+
+    redis:
+        image: redis
+        networks:
+            - rating-1
+            
+    rabbitmq:
+        image: "rabbitmq:management"
+        ports:
+            - 5672:5672
+            - 15672:15672
+        networks:
+            - jnp-internal-1
+
+networks:
+    jnp-internal-1:
+        external: true
+    rating-1:

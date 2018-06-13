@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+    nginx:
+        image: nginx:latest
+        ports:
+            - "8002:80"
+        volumes:
+            - ./src:/src
+            - ./config/nginx:/etc/nginx/conf.d
+        networks:
+            - jnp-internal-1
+            
+networks:
+    jnp-internal-1:
+        external: true
