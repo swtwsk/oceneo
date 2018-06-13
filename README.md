@@ -12,6 +12,8 @@ docker-compose
 ```
 ### Instalacja
 ```
+cd flask; make
+cd ..
 make
 ```
 Przed pierwszym uruchomieniem warto "z palca" wykonać polecenie ```docker swarm init```, by sprawdzić, czy nie trzeba ręcznie ustalić adresu IP dla _docker swarma_ i ewentualnie zmodyfikować plik Makefile.
